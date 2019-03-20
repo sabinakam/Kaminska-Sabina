@@ -3,9 +3,6 @@
 
 using namespace std;
 
-
-
-
 #ifdef USE_TRIGONOMETRY_DEGREE
 #include "trygonometria.h"
 using namespace degreemath;
