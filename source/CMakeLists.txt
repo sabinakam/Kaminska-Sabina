@@ -17,3 +17,16 @@ configure_file ("${PROJECT_SOURCE_DIR}/LaborkaConfig.h.in"
 "${PROJECT_BINARY_DIR}/LaborkaConfig.h"
 )
 include_directories("${PROJECT_BINARY_DIR}")
+
+enable_testing()
+
+if(BUILD_TESTS) 
+add_test (LaborkaPodstawowyTest Laborka)
+add_test (LaborkaWynikSin45 Laborka 45)
+set_tests_properties (LaborkaWynikSin45PROPERTIES PASS_REGULAR_EXPRESSION "0[.,]70710")
+add_test (Laborka3sek Laborka)
+set_tests_properties (Laborka3sekPROPERTIES TIMEOUT 3)
+
+
+
+endif(BUILD_TESTS)
